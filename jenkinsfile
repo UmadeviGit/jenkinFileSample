@@ -5,7 +5,7 @@ node {
      dir("${WORKSPACE}")
        {
        sh "ls"
-       sh "cmake -S . -B build" 
+       sh "C:\\Program Files\\CMake\\bin\\cmake.exe" 
        }
 
         echo 'Building....'
