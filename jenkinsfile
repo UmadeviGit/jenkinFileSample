@@ -1,10 +1,8 @@
 node {
     stage('Build') {
          print "Hello"
-         def out = exec("cp866", "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Sample1", "cmd", ["cmake","-S",".","-B","build","CMakeLists.txt"])
-
-        println "OUT:\n" + out[0]
-        println "ERR:\n" + out[1]
+        File workingDir = file("C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Sample1")
+        def proc = "cmake -S . -B build".execute([], workingDir.absolutePath);
         echo 'Building....'
     }
     stage('Test') {
