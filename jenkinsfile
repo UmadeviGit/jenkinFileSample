@@ -3,11 +3,8 @@ node {
          print "Hello cmake"
        
        
-        
-      
-def commando = "cmd,cmake -S . -B build"
-def procs = commando.execute()
-procs.waitFor()   
+        sh "$WORKSPACE"
+       sh "cmake -S . -B build" 
 
         echo 'Building....'
     }
