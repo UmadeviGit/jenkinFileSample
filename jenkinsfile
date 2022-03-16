@@ -1,7 +1,7 @@
 node {
     stage('Build') {
          print "Hello cmake"
-       string cmake ="C:\Program Files\CMake\bin\cmake.exe"
+       string cmake ="C:\\Program Files\\CMake\\bin\\cmake.exe"
      dir("${WORKSPACE}")
        {
        sh "ls"
