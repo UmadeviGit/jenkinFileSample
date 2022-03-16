@@ -2,7 +2,7 @@ node {
     stage('Build') {
          print "Hello cmake"
        
-     dir( ""${WORKSPACE}")
+     dir("${WORKSPACE}")
        {
        sh "ls"
        sh "cmake -S . -B build" 
