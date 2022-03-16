@@ -1,26 +1,8 @@
-pipeline {
-node {
 
-    agent { docker { image 'python:3.10.1-alpine' } }
-    
+node('docker') {
     stage('Build') {
-         print "Hello cmake"
-       
-     dir("${WORKSPACE}")
-       {
-       sh "ls"
-       sh "python Hello.py" 
-       }
-
-        echo 'Building....'
+        docker.image('python:3.10.1-alpine').inside {
+            sh 'python --version'
+        }
     }
-    stage('Test') {
-     print "Hello world"
-        echo 'Testing....'
-    }
-    stage('Deploy') {
-     print "Hello world 123"
-        echo 'Deploying....'
-    }
-}
 }
