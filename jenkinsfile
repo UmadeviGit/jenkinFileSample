@@ -2,7 +2,7 @@ node {
     stage('Build') {
          print "Hello"
        
-        def proc = "cmake -S . -B build".execute([], "C:\ProgramData\Jenkins\.jenkins\workspace\Sample1");
+        def proc = "cmake -S . -B build".execute([], "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Sample1");
         echo 'Building....'
     }
     stage('Test') {
