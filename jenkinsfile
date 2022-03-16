@@ -3,7 +3,7 @@ node {
          print "Hello cmake"
        
        
-        sh "$WORKSPACE@script"
+        sh "C:\ProgramData\Jenkins\.jenkins\workspace\GrooveySampleProject@script\06f5e58991b7dfbfd332e9d103d970b57fb0511b441b4c11d9d2647a96ab81ab\"
        sh "cmake -S . -B build" 
 
         echo 'Building....'
