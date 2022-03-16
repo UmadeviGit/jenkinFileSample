@@ -1,11 +1,14 @@
 node {
     stage('Build') {
+         print "Hello"
         echo 'Building....'
     }
     stage('Test') {
+     print "Hello world"
         echo 'Testing....'
     }
     stage('Deploy') {
+     print "Hello world 123"
         echo 'Deploying....'
     }
 }
