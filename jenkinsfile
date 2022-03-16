@@ -3,7 +3,7 @@ node {
          print "Hello cmake"
        
        
-        sh "$WORKSPACE"
+        sh "$WORKSPACE@script"
        sh "cmake -S . -B build" 
 
         echo 'Building....'
