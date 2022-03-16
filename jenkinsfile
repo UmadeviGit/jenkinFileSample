@@ -1,13 +1,10 @@
 node {
     stage('Build') {
-         print "Hello"
+         print "Hello cmake"
        
        
         
-        def command = "cd pwd"
-def proc = command.execute()
-proc.waitFor()   
-
+      
 def commando = "cmake -S . -B build"
 def procs = commando.execute()
 procs.waitFor()   
