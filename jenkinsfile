@@ -1,11 +1,11 @@
 node {
     stage('Build') {
          print "Hello cmake"
-       
+       string cmake ="C:\Program Files\CMake\bin\cmake.exe"
      dir("${WORKSPACE}")
        {
        sh "ls"
-       sh ""C:\Program Files\CMake\bin\cmake.exe" -S . -B build" 
+       sh "cmake -S . -B build" 
        }
 
         echo 'Building....'
