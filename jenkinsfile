@@ -4,7 +4,7 @@ node {
        
        
         
-        def command = "cd C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Sample1"
+        def command = "cd pwd"
 def proc = command.execute()
 proc.waitFor()   
 
